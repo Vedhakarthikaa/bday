@@ -1,0 +1,197 @@
+/* ===== Google Fonts are loaded in HTML ===== */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff9aa2, #ffb7b2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  color: #ffffff;
+}
+
+/* Main Card */
+.center {
+  background: rgba(0, 0, 0, 0.18);
+  padding: 55px 35px;
+  border-radius: 30px;
+  backdrop-filter: blur(10px);
+  max-width: 520px;
+  width: 90%;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  animation: fadeIn 1.6s ease;
+}
+
+/* Heading */
+.center h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 58px;
+  margin-bottom: 22px;
+  color: #ffffff;
+  text-shadow: 0 6px 18px rgba(0,0,0,0.35);
+}
+
+/* Intro Text */
+.intro {
+  font-size: 23px;
+  font-weight: 500;
+  line-height: 1.7;
+  margin-bottom: 20px;
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Time Text */
+.time {
+  font-size: 21px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 0 3px 10px rgba(0,0,0,0.25);
+}
+
+/* Divider */
+.divider {
+  width: 90px;
+  height: 4px;
+  background: rgba(255,255,255,0.95);
+  margin: 30px auto 35px;
+  border-radius: 10px;
+}
+
+/* Button */
+button {
+  font-size: 21px;
+  padding: 18px 44px;
+  border: none;
+  border-radius: 45px;
+  background: #ff2e63;
+  color: #ffffff;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.45);
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.center {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  backdrop-filter: blur(8px);
+}
+
+/* Heading */
+h1 {
+  margin-top: 30px;
+}
+
+/* Instruction text */
+#instruction {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+/* Button */
+button {
+  padding: 12px 22px;
+  border: none;
+  background: #ff4d6d;
+  color: white;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Hide elements */
+.hidden {
+  display: none;
+}
+
+/* Cake Area */
+.cake-area {
+  position: relative;
+  width: 300px;
+  margin: 40px auto;
+}
+
+/* Cake Image */
+.cake {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Candles */
+.candle {
+  position: absolute;
+  width: 8px;
+  height: 30px;
+  background: white;
+  top: 110px;              /* sits on cake */
+  border-radius: 3px;
+  z-index: 3;
+}
+
+/* Candle positions */
+.c1 { left: 115px; }
+.c2 { left: 145px; }
+.c3 { left: 175px; }
+
+/* Flame */
+.flame {
+  width: 10px;
+  height: 15px;
+  background: orange;
+  border-radius: 50%;
+  position: absolute;
+  top: -15px;
+  left: -1px;
+  z-index: 4;
+  animation: flicker 0.3s infinite alternate;
+}
+
+/* Flame animation */
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+/* Flame blown out */
+.flame.off {
+  display: none;
+}
+
+/* Cake Slice */
+#slice {
+  position: absolute;
+  width: 120px;
+  top: 120px;
+  left: 90px;
+  opacity: 0;
+  z-index: 2;
+  transition: all 1s ease;
+}
+
+/* Slice animation */
+#slice.show {
+  opacity: 1;
+  transform: translateX(160px) rotate(15deg);
+}

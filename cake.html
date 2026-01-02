@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Birthday Cake 🎂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Happy Birthday My Love 🎉</h1>
+
+<p id="instruction">
+Make a wish and blow on <span id="count">3</span> 💨
+</p>
+
+<div class="cake-area">
+  <img src="assets/images/cake.jfif" class="cake">
+
+  <!-- Candles -->
+  <div class="candle c1"><div class="flame"></div></div>
+  <div class="candle c2"><div class="flame"></div></div>
+  <div class="candle c3"><div class="flame"></div></div>
+
+  <!-- Slice -->
+  <img src="assets/images/slice.jfif" id="slice">
+</div>
+
+<button id="cutBtn" onclick="cutCake()" class="hidden">
+Cut the Cake 🎂
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

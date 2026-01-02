@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff9aa2, #ffb7b2);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 90%;
+  max-width: 600px;
+  text-align: center;
+  padding: 60px 0;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  margin-bottom: 10px;
+}
+
+.intro {
+  font-size: 20px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+/* Film strip */
+.film-strip {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 30px 0;
+  position: relative;
+}
+
+/* Film spine */
+.film-strip::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: #111;
+  transform: translateX(-50%);
+  border-radius: 10px;
+  opacity: 0.6;
+}
+
+/* Frame */
+.frame {
+  background: #000;
+  padding: 14px;
+  border-radius: 14px;
+  box-shadow: inset 0 0 0 4px #333, 0 20px 40px rgba(0,0,0,0.4);
+  position: relative;
+}
+
+/* Film holes */
+.frame::before,
+.frame::after {
+  content: '';
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background: #555;
+  border-radius: 50%;
+  top: 20px;
+}
+
+.frame::before {
+  left: -18px;
+}
+
+.frame::after {
+  right: -18px;
+}
+
+/* Image */
+.frame img {
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Caption */
+.frame span {
+  display: block;
+  margin-top: 14px;
+  font-size: 15px;
+  opacity: 0.9;
+}
+
+/* End text */
+.end-line {
+  margin-top: 50px;
+  font-size: 20px;
+}
+
+/* Button */
+button {
+  margin-top: 30px;
+  padding: 16px 42px;
+  font-size: 18px;
+  border-radius: 40px;
+  border: none;
+  background: #ff2e63;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}

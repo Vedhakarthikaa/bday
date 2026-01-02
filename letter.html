@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Playfair+Display:wght@600&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/letter.css">
+</head>
+<body>
+
+<div class="container">
+
+  <!-- Envelope -->
+  <div class="envelope" id="envelope" onclick="openLetter()">
+    <div class="flap"></div>
+    <div class="body"></div>
+
+    <!-- Wax Seal -->
+    <div class="wax-seal">💖</div>
+  </div>
+
+  <!-- Scroll Letter -->
+  <div class="scroll hidden" id="letter">
+    <div class="paper">
+
+      <h1>Dear My Love ❤️</h1>
+
+      <p>
+        From the moment you came into my life, everything felt lighter.
+        You are my comfort, my strength, and my favorite person.
+      </p>
+
+      <p>
+        No matter where life takes us, I want you to know —
+        you will always have my heart.
+      </p>
+
+      <button onclick="window.location.href='memories.html'">
+        One More Surprise 🎁
+      </button>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Paper sound -->
+<audio id="paperSound" src="assets/paper.mp3" preload="auto"></audio>
+
+<script src="js/letter.js"></script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff9aa2, #ffb7b2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  text-align: center;
+}
+
+/* ================= ENVELOPE ================= */
+.envelope {
+  width: 260px;
+  height: 170px;
+  position: relative;
+  cursor: pointer;
+  animation: fadeIn 1.5s ease;
+}
+
+.envelope .body {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+}
+
+.envelope .flap {
+  width: 0;
+  height: 0;
+  border-left: 130px solid transparent;
+  border-right: 130px solid transparent;
+  border-bottom: 85px solid #f2f2f2;
+  position: absolute;
+  top: -85px;
+  left: 0;
+  transform-origin: top;
+  transition: transform 1s ease;
+}
+
+.envelope.open .flap {
+  transform: rotateX(180deg);
+}
+
+/* Wax Seal */
+.wax-seal {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(circle, #b11226, #7a0012);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  color: #ffd6dc;
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 3px 6px rgba(255,255,255,0.3),
+              0 6px 15px rgba(0,0,0,0.4);
+}
+
+/* ================= SCROLL LETTER ================= */
+.scroll {
+  margin-top: 30px;
+  animation: scrollOpen 1.8s ease forwards;
+}
+
+.paper {
+  background: #fffdf5;
+  max-width: 520px;
+  padding: 45px 40px;
+  border-radius: 22px;
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
+
+  /* Paper texture */
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0,0,0,0.02),
+      rgba(0,0,0,0.02) 1px,
+      transparent 1px,
+      transparent 26px
+    );
+}
+
+/* Handwriting font */
+.paper h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 46px;
+  margin-bottom: 30px;
+}
+
+.paper p {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 22px;
+}
+
+/* Button */
+button {
+  margin-top: 25px;
+  padding: 14px 38px;
+  font-size: 18px;
+  border: none;
+  border-radius: 30px;
+  background: #ff2e63;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animations */
+@keyframes scrollOpen {
+  from {
+    opacity: 0;
+    transform: scaleY(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
