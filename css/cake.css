@@ -1,0 +1,128 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* PAGE BACKGROUND */
+body {
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #ff9a9e, #fad0c4);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #5a0d1e;
+}
+
+/* MAIN WRAPPER */
+.page {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 2.6rem;
+  margin-bottom: 10px;
+}
+
+#instruction {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.cake-area {
+  position: relative;
+  width: 340px;        /* was 280px */
+  margin: 0 auto 30px;
+  padding: 30px;
+  background: #fff8f0; /* soft beige instead of white */
+  border-radius: 26px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.18);
+}
+
+
+.cake {
+  width: 100%;
+  max-width: 280px;
+  margin: 0 auto;
+  display: block;
+}
+
+.candle {
+  position: absolute;
+  width: 10px;
+  height: 38px;
+  background: linear-gradient(to bottom, #ff6b6b, #c9184a);
+  top: 22px;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+  border: 1px solid rgba(0,0,0,0.15);
+}
+
+
+.c1 { left: 120px; }
+.c2 { left: 160px; }
+.c3 { left: 200px; }
+
+.flame {
+  width: 14px;
+  height: 18px;
+  background: radial-gradient(circle, #fff3b0 20%, #ff8c00 60%, #ff4500);
+  border-radius: 50%;
+  position: absolute;
+  top: -18px;
+  left: -2px;
+  box-shadow: 0 0 15px rgba(255,140,0,0.9);
+  animation: flicker 0.25s infinite alternate;
+}
+@keyframes flicker {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+/* FLAME OFF */
+.flame.off {
+  display: none;
+}
+
+#slice {
+  position: absolute;
+  width: 140px;
+  bottom: 15px;
+  right: 30px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease;
+}
+
+#slice.show {
+  opacity: 1;
+  transform: translateX(140px) rotate(15deg);
+}
+
+/* BUTTON */
+button {
+  padding: 14px 28px;
+  font-size: 1.1rem;
+  background: #ff4d6d;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(255,77,109,0.4);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.hidden {
+  display: none;
+}

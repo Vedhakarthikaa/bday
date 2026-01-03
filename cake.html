@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Birthday Cake 🎂</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/cake.css">
 </head>
 <body>
 
-<h1>Happy Birthday My Love 🎉</h1>
+<div class="page">
 
-<p id="instruction">
-Make a wish and blow on <span id="count">3</span> 💨
-</p>
+  <h1>Happy Birthday My Love 🎉</h1>
 
-<div class="cake-area">
-  <img src="assets/images/cake.jfif" class="cake">
+  <p id="instruction">
+    Make a wish and blow on <span id="count">3</span> 💨
+  </p>
 
-  <!-- Candles -->
-  <div class="candle c1"><div class="flame"></div></div>
-  <div class="candle c2"><div class="flame"></div></div>
-  <div class="candle c3"><div class="flame"></div></div>
+  <div class="cake-area">
+    <img src="assets/images/cake.jfif" class="cake">
 
-  <!-- Slice -->
-  <img src="assets/images/slice.jfif" id="slice">
+    <!-- Candles -->
+    <div class="candle c1"><div class="flame"></div></div>
+    <div class="candle c2"><div class="flame"></div></div>
+    <div class="candle c3"><div class="flame"></div></div>
+
+    <!-- Slice -->
+    <img src="assets/images/slice.jfif" id="slice">
+  </div>
+
+  <button id="cutBtn" onclick="cutCake()" class="hidden">
+    Cut the Cake 🎂
+  </button>
+
 </div>
-
-<button id="cutBtn" onclick="cutCake()" class="hidden">
-Cut the Cake 🎂
-</button>
 
 <script src="script.js"></script>
 </body>

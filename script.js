@@ -1,50 +1,72 @@
 function goToWish() {
   window.location.href = "wish.html";
 }
+document.addEventListener("click", () => {
+  const music = document.getElementById("birthdayMusic");
+  if (music && music.paused) {
+    music.play();
+  }
+}, { once: true });
+
+
+/* ---------------- TIME TEXT (INDEX PAGE) ---------------- */
+
 function updateTime() {
+  const timeEl = document.getElementById("timeText");
+  if (!timeEl) return; // ⛔ not on this page
+
   const now = new Date();
   let hours = now.getHours();
   let minutes = now.getMinutes();
 
   minutes = minutes < 10 ? "0" + minutes : minutes;
 
-  const timeString = `${hours}:${minutes}`;
-  document.getElementById("timeText").innerText =
-    `Right now, it’s ${timeString}, and I hope you’re smiling.`;
+  timeEl.innerText = `Right now, it’s ${hours}:${minutes}, and I hope you’re smiling.`;
 }
 
 updateTime();
 setInterval(updateTime, 60000);
 
-let count = 3;
-const countSpan = document.getElementById("count");
-const flames = document.querySelectorAll(".flame");
-const cutBtn = document.getElementById("cutBtn");
-const instruction = document.getElementById("instruction");
-const slice = document.getElementById("slice");
+/* ---------------- CAKE COUNTDOWN ---------------- */
 
-// Countdown timer
-const timer = setInterval(() => {
-  count--;
-  countSpan.textContent = count;
+document.addEventListener("DOMContentLoaded", () => {
+  const countEl = document.getElementById("count");
+  const cutBtn = document.getElementById("cutBtn");
+  const flames = document.querySelectorAll(".flame");
 
-  if (count === 0) {
-    clearInterval(timer);
+  // ⛔ Exit if not cake page
+  if (!countEl || !cutBtn || flames.length === 0) return;
 
-    // Blow out candles
-    flames.forEach(flame => flame.classList.add("off"));
+  let count = 3;
+  countEl.textContent = count;
 
-    instruction.textContent = "Yay! Candles blown 🎉";
-    
-    // Show cut button after small delay
-    setTimeout(() => {
+  const timer = setInterval(() => {
+    count--;
+
+    if (count > 0) {
+      countEl.textContent = count;
+    } else {
+      clearInterval(timer);
+
+      // Blow out candles
+      flames.forEach(flame => flame.classList.add("off"));
+
+      document.getElementById("instruction").innerText =
+        "Yay! Candles blown 🎉";
+
       cutBtn.classList.remove("hidden");
-    }, 1000);
-  }
-}, 1000);
+    }
+  }, 1000);
+});
 
-// Cut cake function
+/* ---------------- CUT CAKE ---------------- */
+
 function cutCake() {
-  slice.classList.add("show");
-  cutBtn.textContent = "Enjoy the Cake 💖";
+  const slice = document.getElementById("slice");
+  slice.classList.add("show"); // 🔥 enables animation
+
+ setTimeout(() => {
+    window.location.href = "bye.html";
+  }, 2000);
 }
+

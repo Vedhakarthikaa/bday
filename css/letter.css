@@ -78,28 +78,26 @@ body {
   border-radius: 22px;
   box-shadow: 0 30px 70px rgba(0,0,0,0.35);
 
-  /* Paper texture */
-  background-image:
-    repeating-linear-gradient(
-      0deg,
-      rgba(0,0,0,0.02),
-      rgba(0,0,0,0.02) 1px,
-      transparent 1px,
-      transparent 26px
-    );
+ 
+  background:
+    url("assets/images/paper-texture.png"),
+    #f4ecd8;
+  background-size: cover;
+
 }
 
 /* Handwriting font */
 .paper h1 {
-  font-family: 'Dancing Script', cursive;
+  font-family: 'Caveat', cursive;
   font-size: 46px;
   margin-bottom: 30px;
 }
 
 .paper p {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  line-height: 1.8;
+  font-family: 'Caveat', cursive;
+font-size: 1.6rem;
+line-height: 1.8;
+
   margin-bottom: 22px;
 }
 
